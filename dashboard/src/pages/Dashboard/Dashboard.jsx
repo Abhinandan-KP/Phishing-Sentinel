@@ -2,8 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AlertTriangle, CheckCircle, Activity, Globe, Lock, LogOut, RefreshCw } from 'lucide-react';
 import './Dashboard.css';
+import CONFIG from '../../config';
 
-const API_BASE = "http://localhost:8080";
+const API_BASE = CONFIG.API_BASE_URL;
+const SENTINEL_EXT_ID = "jlhddlkhohfggefbglbheonnaclgipei";// "YOUR_EXTENSION_ID_HERE"; 
+
 
 function Dashboard() {
   const [stats, setStats] = useState({ scanned: 0, threatsBlocked: 0, trustScore: 100 });
