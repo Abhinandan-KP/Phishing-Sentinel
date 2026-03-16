@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:8080";
+const API_BASE = "https://phishing-sentinel-api-service.onrender.com";
 
 async function updatePopupStats() {
   const tokenObj = await chrome.storage.local.get(['sentinel_token']);
